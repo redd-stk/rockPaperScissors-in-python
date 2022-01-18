@@ -1,1 +1,45 @@
-#first project
+import random
+
+while True:
+    choices = ["rock", "paper", "scissors"]
+    computer = random.choice(choices)
+    player = None
+    while player not in choices:  #keeps asking to choose when player gives an answer not in the choices given
+        player = input("Choose one - rock, paper or scissors: ").lower() #takes player input and converts to lower case automatically
+    if player == computer:
+        print(player)
+        print(computer)
+        print("It's aTie!!")
+    elif player == "rock":
+        if computer == "paper":
+            print(player)
+            print(computer)
+            print("You Lose!!")
+        if computer == "scissors":
+            print(player)
+            print(computer)
+            print("You Win!!")
+    elif player == "paper":
+        if computer == "scissors":
+            print(player)
+            print(computer)
+            print("You Lose!!")
+        if computer == "rock":
+            print(player)
+            print(computer)
+            print("You Win!!")
+    elif player == "scissors":
+        if computer == "paper":
+            print(player)
+            print(computer)
+            print("You Win!!")
+        if computer == "rock":
+            print(player)
+            print(computer)
+            print("You Lose!!")
+    
+    playAgain = input("Do you Want To Play Again? yes/no: ")
+    if playAgain != "yes":
+        break
+
+print("Byee!")
